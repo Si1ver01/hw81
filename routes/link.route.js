@@ -46,14 +46,11 @@ router.post(
 
 router.get("/:shortUrl", async (req, res) => {
   const { shortUrl } = req.params;
-  console.log(shortUrl);
-
   const candidate = await Link.findOne({ shortUrl });
 
   if (candidate) {
     const { originalUrl } = candidate;
-    res.redirect(originalUrl);
-    return;
+    return res.redirect(originalUrl);
   }
 
   res.status(400).json({ error: "Такой ссылки нет" });
