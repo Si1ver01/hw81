@@ -7,7 +7,7 @@ const app = express();
 const PORT = 8000;
 
 app.use(express.json());
-app.use("/link", linkRoute);
+app.use("/", linkRoute);
 
 const start = async () => {
   await mongoose.connect("mongodb://localhost/shortUrl", {

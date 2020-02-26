@@ -7,7 +7,7 @@ const Link = require("../models/Link.model");
 const router = Router();
 
 router.post(
-  "/",
+  "/link",
   check("originalUrl", "Неверный формат ссылки").isURL({
     protocols: ["http", "https"],
     require_protocol: true

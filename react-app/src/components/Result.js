@@ -17,7 +17,7 @@ const Result = () => {
     );
   }
 
-  const formatLink = `http://localhost:8000/link/${link.shortUrl}`;
+  const formatLink = `http://localhost:8000/${link.shortUrl}`;
 
   return (
     <p className="text-center mt-2">
